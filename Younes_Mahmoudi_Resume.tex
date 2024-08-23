@@ -1,0 +1,200 @@
+%-------------------------
+% Resume in Latex
+% Author : Younes Mahmoudi
+% Website: https://github.com/younesious/resume
+% License : MIT
+%------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{inter} 
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    top=1.8cm,
+    bottom=1in,
+    left=2.5cm,
+    right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=2em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+\usepackage[dvipsnames]{xcolor}
+\colorlet{icnclr}{gray}
+\definecolor{primaryColor}{HTML}{0E76A8}  % LinkedIn blue
+\definecolor{secondaryColor}{HTML}{4B4B4B}  % Dark gray
+
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\color{primaryColor}\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\fontseries{bold}\selectfont}{}{}{\rvs}
+\titleformat{\subsubsection}{\color{gray}\fontseries{bold}\selectfont}{}{}{}
+
+\usepackage{xhfill} 
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[primaryColor]} % add rule after title in .5 x-height 
+
+\newif\ifRemVS % remove vspace between \section & \subsection
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+\usepackage{fontawesome5}
+\usepackage{graphicx}
+
+\usepackage[bookmarks=false]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primaryColor,
+    pdftitle={Younes Mahmoudi - Resume},
+}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{array}
+\begin{document}
+
+%== HEADER ==%
+\begin{center}
+    {\fontsize{28}{28}\selectfont Younes Mahmoudi} \\ \bigskip
+
+    {\color{icnclr}\faEnvelope[regular]} \href{mailto:younesious80@gmail.com}{younesious80@gmail.com} \quad
+    {\color{icnclr}\faLinkedin} \href{https://www.linkedin.com/in/younesious}{LinkedIn} \quad
+    {\color{icnclr}\faGithub} \href{https://github.com/younesious}{GitHub} \quad
+    {\color{icnclr}\faIcon{mobile-alt}} \href{tel:+989023018059}{+98 902 301 8059}
+\end{center}
+
+\section{Summary}
+Passionate software engineer with experience in C++, Python, Golang, web development, and backend frameworks. Skilled in algorithms, design
+patterns, databases, and essential development tools. Also familiar with
+and interested in system design and software architecture, with an
+attention to detail. I have achieved some success in programming
+competitions and am motivated to contribute expertise in
+innovative software solutions.
+
+%== EXPERIENCE ==%
+\section{Experience}
+
+\noindent
+\begin{tabular}{@{}m{1cm}@{}m{12cm}}
+    \includegraphics[height=0.8cm]{q-logo.png} &
+    {\fontsize{12}{15}\selectfont\textbf{Quera}} \\
+    & \textcolor{secondaryColor}{Part-time \textbullet \hspace{0mm} 1 yr 10 mos} \\
+    & \textcolor{secondaryColor}{Tehran, Iran \textbullet \hspace{0mm} Remote} \\
+\end{tabular}
+
+\vspace{-0.1cm}
+
+\begin{itemize}[leftmargin=1cm, itemsep=0.1cm]
+    %== First Position ==%
+    \item \textbf{Course Instructor \& Maintainer} \\
+    \textcolor{secondaryColor}{Nov 2022 -- Present \textbullet \hspace{1mm} 1 yr 10 mos} \\
+    \textcolor{primaryColor}{\faAward} \hspace{1mm} \textcolor{secondaryColor}{Go, Linux, Laravel, PHP, MySQL, TDD, Git, NoSQL, Docker and familiar with K8s} \\
+    \textcolor{primaryColor}{\faTasks} \hspace{1mm} \textcolor{secondaryColor}{Designed and developed training courses, projects, and tests; Mentored peers in various technologies}
+    %== Second Position ==%
+    \item \textbf{Products Owner and Problem Setter at Quera bootcamps (Go)} \\
+    \textcolor{secondaryColor}{Apr 2023 -- Jul 2023 \textbullet \hspace{1mm} 4 mos} \\
+    \textcolor{primaryColor}{\faAward} \hspace{1mm} \textcolor{secondaryColor}{Go, Echo, PostgreSQL, GORM, TDD, Linux, Git and agile} \\
+    \textcolor{primaryColor}{\faTasks} \hspace{1mm} \textcolor{secondaryColor}{As a Product Owner: Analyzed product requirements and oversaw the development process, ensuring team alignment And timely project delivery} \\
+    \textcolor{primaryColor}{\faTasks} \hspace{1mm} \textcolor{secondaryColor}{As a Problem Setter: Designed problems, projects, and test cases utilizing Go, database interaction with GORM and
+    the Echo.}
+    %== Third Position ==%
+    \item \textbf{Problem Setter at Quera bootcamps (PHP-Laravel)} \\
+    \textcolor{secondaryColor}{Dec 2022 -- Feb 2023 \textbullet \hspace{1mm} 3 mos} \\
+    \textcolor{primaryColor}{\faAward} \hspace{1mm} \textcolor{secondaryColor}{PHP, Laravel, MySQL, Design patterns and Testing } \\
+    \textcolor{primaryColor}{\faTasks} \hspace{1mm} \textcolor{secondaryColor}{Designing projects to familiarize with design patterns with pure PHP and the final project of an Laravel e-commerce site}
+\end{itemize}
+
+
+%== EDUCATION ==%
+\section{Education}
+\subsection{Master of Science - MS, Computer Software Engineering \hfill Sep 2023 - Present}
+\subsection{\textcolor{primaryColor}{\faUniversity}\hspace{0.5em}Iran University of Science and Technology \hfill GPA: 3.65/4.00}
+\subsubsection{\textcolor{primaryColor}{\faFile}\hspace{0.5em}Thesis: cryptocurrency price prediction}
+
+\vspace{1em}
+\noindent\hspace*{\fill}\textcolor{primaryColor}{\rule[0.5ex]{.65\linewidth}{0.1mm}}\hspace*{\fill}
+
+\subsection{Bachelor of Engineering - BE, Computer Engineering \hfill Jan 2019 - Sep 2023}
+\subsection{\textcolor{primaryColor}{\faUniversity}\hspace{0.5em}Hakim Sabzevari University}
+\subsubsection{\textcolor{primaryColor}{\faGraduationCap}\hspace{0.5em} Honors: Third place in free programming}
+
+\vspace{1em}
+\noindent\hspace*{\fill}\textcolor{primaryColor}{\rule[0.5ex]{.65\linewidth}{0.1mm}}\hspace*{\fill}
+
+\subsection{Diploma in Theoretical and Mathematical
+Physics \hfill Oct 2013 - Jul 2019}
+\subsection{\textcolor{primaryColor}{\faUniversity}\hspace{0.5em} Sampad}
+
+
+%== PROJECTS ==%
+\section{Projects}
+
+\subsection[microservices (Go)]{\href{https://github.com/younesious/go-microservices}{microservices (Go)} \hfill \textcolor{secondaryColor}{\small June 2024}}
+\begin{itemize}
+    \item[\color{primaryColor}\small\faLaptopCode] \small{This project was designed with educational purposes for the final project of the IUST software engineering course and aims to cover a wide range of software engineering topics}
+\end{itemize}
+
+\subsection[Events managing]{\href{https://github.com/younesious/events}{Events managing} \hfill \textcolor{secondaryColor}{\small June 2024}}
+\begin{itemize}
+    \item[\color{primaryColor}\small\faLaptopCode] \small{This is a backend program written in Go for managing events. Users can sign up, log in, and perform various actions based on their JWT tokens.}
+\end{itemize}
+
+\subsection[GORM]{\href{https://github.com/younesious/GORM}{GORM} \hfill \textcolor{secondaryColor}{\small February 2023}}
+\begin{itemize}
+    \item[\color{primaryColor}\small\faLaptopCode] \small{This project was for the Bale contest where Gorm's ability to participate was important. And in it, building models and relationships between them, as well as scoping and querying were examined}
+\end{itemize}
+
+\subsection[Laravel Quera College CMS Project]{\href{http://laravel.qcollege.ir/}{Laravel Quera College CMS Project} \hfill \textcolor{secondaryColor}{\small August 2022}}
+\begin{itemize}
+    \item[\color{primaryColor}\small\faLaptopCode] \small{This project was designed for Laravel Quera college course. which was developed in a modular architechture and tried to understand the relationships in Eloquent.}
+\end{itemize}
+
+
+%== CERTIFICATES ==%
+\section{Certificates}
+\begin{itemize}
+    \item[\color{primaryColor}\small\faCertificate] \href{https://www.coursera.org/account/accomplishments/certificate/L88EK5G4WBPC}{Getting Started with Go} - Coursera, April 2023
+    \item[\color{primaryColor}\small\faCertificate] \href{https://www.coursera.org/account/accomplishments/certificate/KN4JUE7SPLKE}{Functions, Methods, and Interfaces in Go} - Coursera, April 2023
+    \item[\color{primaryColor}\small\faCertificate] \href{https://www.coursera.org/account/accomplishments/certificate/MCKPES48VB8Y}{Concurrency in Go} - Coursera, May 2023
+\end{itemize}
+
+
+%== SKILLS ==%
+\section{Skills}
+\begin{itemize}
+    \item \textbf{Programming Languages:} Golang, Python, PHP, C++
+    \item \textbf{Tools \& Technologies:} Linux, Git, Docker, Echo, Gin, PostgreSQL, MYSQL, TDD, Laravel, Apache Cassandra, Redis, MongoDB and just a little familiar with K8s
+    \item \textbf{Soft Skills:} interested in teamwork, interested in details and learning, Communication, sense of humor, critical thinking, working in different teams
+\end{itemize}
+
+
+%== LANGUAGE ==%
+\section{Language}
+\begin{itemize}
+    \item English (Ready for work)
+\end{itemize}
+
+\end{document}
