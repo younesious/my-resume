@@ -1,0 +1,25 @@
+name: Build LaTeX Resume
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build and compile resume using Docker
+        run: |
+          docker build -t my-resume .
+          docker run --rm -v "$(pwd):/resume" my-resume
+
+      - name: Upload resume PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume-pdf
+          path: Younes_Mahmoudi_Resume.pdf
